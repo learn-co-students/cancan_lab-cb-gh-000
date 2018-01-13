@@ -1,0 +1,8 @@
+Login
+
+<%= form_tag(sessions_path) do %>
+  <%= text_field_tag :name, ‘’,:placeholder => “Name” %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<p>Or, <%= link_to “Sign Up”, signup_path %></p>
