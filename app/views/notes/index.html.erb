@@ -1,0 +1,14 @@
+<div class="page-header"><h1>Welcome!</h1></div>
+
+
+<% if current_user %>
+  <% @notes.each do |n| %>
+    <%= n.content  %>
+  <% end %>
+<% else %>
+  please login
+  <%= form_tag login_path, method: :post do %>
+  <%= text_field_tag :name %>
+    <%= submit_tag "login" %>
+  <% end %>
+<% end %>

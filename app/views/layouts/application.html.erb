@@ -7,8 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<p>
+  <%= flash[:notice] unless flash[:notice].blank? %>
+  <%= flash[:alert] unless flash[:alert].blank? %>
+</p>
 
 <%= yield %>
+
+<h1>hi <%= current_user.name if current_user%></h1>
+<%= link_to 'logout', logout_path, method: :delete  if current_user %>
+
 
 </body>
 </html>
