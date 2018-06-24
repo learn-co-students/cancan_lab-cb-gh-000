@@ -1,4 +1,4 @@
-# CancanCan Secret Notes
+g# CancanCan Secret Notes
 
 ## Objectives
 1. Understand how to create an Ability class.
