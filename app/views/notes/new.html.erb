@@ -1,0 +1,9 @@
+<h1>New Note</h1>
+
+<%= form_for @note do |f| %>
+	<%= f.label :content %>
+	<%= f.text_field :content %><br><br>
+	<%= f.label :visible_to %>
+	<%= f.text_field :visible_to %><br><br>
+	<%= f.submit %>
+<% end %>
