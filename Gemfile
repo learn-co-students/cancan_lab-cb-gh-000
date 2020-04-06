@@ -52,3 +52,5 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.7'
   gem 'capybara'
 end
+
+gem "pry", "~> 0.12.2"
