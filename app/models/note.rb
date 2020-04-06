@@ -3,6 +3,8 @@ class Note < ApplicationRecord
   has_many :viewers
   has_many :readers, through: :viewers, source: :user
 
+  before_save :add_owner_to_readers
+
   def visible_to
     readers.map {|reader| reader.name }.join(',')
   end
@@ -21,4 +23,8 @@ class Note < ApplicationRecord
     end.compact
   end
 
+
+  def add_owner_to_readers
+    viewers.build(user: user)
+  end
 end

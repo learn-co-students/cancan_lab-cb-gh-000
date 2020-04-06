@@ -14,7 +14,7 @@ class Ability
       can :create, Note
 
       can :read, Note do |note|
-        note.readers.include?(user)  
+        note.readers.include?(user)
       end
     end
 
