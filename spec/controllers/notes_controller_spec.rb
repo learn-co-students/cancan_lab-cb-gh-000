@@ -72,7 +72,6 @@ RSpec.describe NotesController, type: :controller do
         note = Note.create(content: @content, visible_to: '')
         note.user = @beth
         note.save!
-
         post :update, params: { id: note.id, note: {visible_to: 'alice'} }
         note.reload
         expect(note.visible_to).to match(@alice.name)
